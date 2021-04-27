@@ -1,0 +1,40 @@
+/**
+* The application configuration.
+* Monolith Virgilio
+* @author Virgilio
+*/
+application {
+   config {
+       applicationType monolith
+       packageName br.com.qualitytecnologia
+       baseName virgilio     
+       nativeLanguage pt-br 	  
+       devDatabaseType postgresql
+       prodDatabaseType postgresql
+       // serviceDicoveryType eureka
+       /* incrementalChangelog true
+       * skipFakeData true
+       * withGeneratedFlag true
+       * jhipster jdl .jdl/app.jdl --incremental-changelog --with-generated-flag --skip-fake-data   --skip-install
+       */
+   }
+   entities Blog, Post, Tag
+}
+entity Blog {
+ name String required minlength(3)
+ handle String required minlength(2)
+ status Boolean
+ description String
+}
+entity Post {
+ title String required
+ content TextBlob required
+ date Instant required
+}
+entity Tag {
+ name String required minlength(2)
+}
+ 
+dto * with mapstruct
+service * with serviceClass
+paginate * with pagination

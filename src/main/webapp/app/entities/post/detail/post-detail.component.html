@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="post">
+      <h2 data-cy="postDetailsHeading"><span jhiTranslate="virgilioApp.post.detail.title">Post</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ post.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="virgilioApp.post.title">Title</span></dt>
+        <dd>
+          <span>{{ post.title }}</span>
+        </dd>
+        <dt><span jhiTranslate="virgilioApp.post.content">Content</span></dt>
+        <dd>
+          <span>{{ post.content }}</span>
+        </dd>
+        <dt><span jhiTranslate="virgilioApp.post.date">Date</span></dt>
+        <dd>
+          <span>{{ post.date | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/post', post.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
