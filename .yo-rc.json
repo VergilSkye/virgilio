@@ -44,6 +44,9 @@
     "pages": [],
     "creationTimestamp": 1619564216924,
     "jwtSecretKey": "Mzc4ZGM4ZTI0YWM1YjEyZmJlZmU2MzgzYWE4MGU0YWFiMGJjNGMyMDViOWFlNmQ5MDFkNTFjZTVkYzc0N2Y4YTczY2VlZjE2NGI0YTE2OGM3NTQ5MTVhNmY2NWY1MTY1NmE1ZjdmZmM1YzczNzQ5YmM1ZTRiOTk3NjAyMWEyMGE=",
-    "lastLiquibaseTimestamp": 1619564396000
+    "lastLiquibaseTimestamp": 1619564396000,
+    "herokuAppName": "virgilio",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "11"
   }
 }
