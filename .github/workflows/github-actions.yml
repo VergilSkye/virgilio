@@ -29,7 +29,7 @@ jobs:
             - name: Package application
               run: npm run java:jar:prod
             - name: Deploy to Heroku
-              if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+              if: github.event_name == 'push'
               env:
                   HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
               run: |
